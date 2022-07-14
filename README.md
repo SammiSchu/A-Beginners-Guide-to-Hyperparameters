@@ -1,6 +1,8 @@
 # A Beginners Guide to Hyperparameters
 #### Written by: Samantha Schumacher and Mark Sherman, Ph.D.
 
+## add accesible text for images, and labels for table 
+
 ## HyperParameters 
 ---
 Within a neural network, there are *parameters* and *hyperparameters*. Parameters are considered *internal*, for example, the weights attached to each neuron would be considered a parameter. Parameters are determined by the optimizer through training the model. Hyperparameters, on the other hand, are *external* to the model, meaning we do have direct control over them. Hyperparameters are manually set before the training process begins. The most common hyperparameters you will interact with are the learning rate, momentum, batch size, and optimizers. Once the hyperparameters are set, and you hit the “train” button, the optimizer will use those values to inform decisions it makes while training.
@@ -130,7 +132,7 @@ Tota, Kaivalya. [“Adam: The Birthchild of Adagrad and RMSProp.”](https://med
 
 Versloot, Christian. [“Extensions to Gradient Descent from Momentum to AdaBound.”](https://github.com/christianversloot/machine-learning-articles/blob/main/extensions-to-gradient-descent-from-momentum-to-adabound.md) GitHub, February 15, 2022.   
 
-[^1]: https://www.andreaperlato.com/theorypost/the-learning-rate/#:~:text=The%20range%20of%20values%20to,starting%20point%20on%20your%20problem
+[^1]: Andrea Perlato, [“The Learning Rate - Andrea Perlato.”](https://www.andreaperlato.com/theorypost/the-learning-rate/#:~:text=The%20range%20of%20values%20to,starting%20point%20on%20your%20problem) AndreaPerlato.com.
 [^2]:https://machinelearningmastery.com/difference-between-a-batch-and-an-epoch/
 [^3]:https://machinelearningmastery.com/how-to-control-the-speed-and-stability-of-training-neural-networks-with-gradient-descent-batch-size/#:~:text=Batch%20size%20controls%20the%20accuracy,stability%20of%20the%20learning%20process
 [^4]:https://medium.com/analytics-vidhya/when-and-why-are-batches-used-in-machine-learning-acda4eb00763
