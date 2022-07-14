@@ -34,6 +34,7 @@ If the learning rate is too low it might eventually reach an acceptable loss (so
 In the following image, you can see a visual summary of how to tell if your learning rate is set too high or too low.  
 
 ![](LR_sum.png)
+
 [Understanding learning rates](https://towardsdatascience.com/understanding-learning-rates-and-how-it-improves-performance-in-deep-learning-d0d4059c1c10)
 
 ## Batch Size
@@ -62,6 +63,7 @@ To combat the memory and time issues associated with Gradient Descent, SGD break
 The animation below shows how an SGD optimizer interacts with the gradient. It is able to move out of the local minima and land in the general area of the global minimum. Once in the global minimum, it oscillates back and forth for a couple of iterations before landing at the bottom. 
 
 ![](SGD_gif.gif)
+
 [Visual representation of SGD](https://medium.com/@kaitotally/adam-the-birthchild-of-adagrad-and-rmsprop-b5308b24b9cd#:~:text=RMSProp%20is%20a%20derivation%20of,the%20sum%20of%20its%20gradients)
 
 ## SGD with momentum 
@@ -71,6 +73,7 @@ This optimizer uses the same approach as SGD except momentum is added. That mean
 This animation visualizes the benefits of using momentum. Just like with SGD, the optimizer quickly exits the local minima. However, unlike SGD, there is significantly less oscillation around the global minimum.
 
 ![](SGD_momentum.gif)
+
 [Visual representaton of SGD with momentum](https://medium.com/@kaitotally/adam-the-birthchild-of-adagrad-and-rmsprop-b5308b24b9cd#:~:text=RMSProp%20is%20a%20derivation%20of,the%20sum%20of%20its%20gradients)
 
 ## Adaptive Gradient Descent (AdaGrad)
@@ -90,6 +93,7 @@ This optimizer is an extension to AdaGrad that also addresses the vanishing grad
 Adam is a combination of RMSprop and momentum. As in RMSprop, Adam uses a moving window of past parameter changes that is denoted by the Beta1 and Beta2 hyperparameters. The Beta1 value controls momentum. Beta2 replaces the Gamma hyperparameter from RMSprop, which controls the window size. This allows the model to take big enough steps using momentum, while also limiting any oscillation around the global minimum.[^13] Adam works well in many different situations and is one of the best performing optimizers.[^14] The Beta1 and Beta2 hyperparameters should be set within the range 0 ≤ B < 1, however, the creators of the Adam optimizer recommend Beta1 be set to 0.9 and Beta2 be set to 0.999.[^15] You can see the benefits of the Adam optimizer in the graphic below. 
 
 ![](adam.gif)
+
 [Visual representation of Adam 0ptimizer](https://medium.com/@kaitotally/adam-the-birthchild-of-adagrad-and-rmsprop-b5308b24b9cd#:~:text=RMSProp%20is%20a%20derivation%20of,the%20sum%20of%20its%20gradients)
 
 ## AdaMax
