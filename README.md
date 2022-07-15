@@ -133,21 +133,22 @@ Tota, Kaivalya. [“Adam: The Birthchild of Adagrad and RMSProp.”](https://med
 Versloot, Christian. [“Extensions to Gradient Descent from Momentum to AdaBound.”](https://github.com/christianversloot/machine-learning-articles/blob/main/extensions-to-gradient-descent-from-momentum-to-adabound.md) GitHub, February 15, 2022.   
 
 [^1]: Andrea Perlato, [“The Learning Rate - Andrea Perlato.”](https://www.andreaperlato.com/theorypost/the-learning-rate/#:~:text=The%20range%20of%20values%20to,starting%20point%20on%20your%20problem) AndreaPerlato.com.
-[^2]:https://machinelearningmastery.com/difference-between-a-batch-and-an-epoch/
-[^3]:https://machinelearningmastery.com/how-to-control-the-speed-and-stability-of-training-neural-networks-with-gradient-descent-batch-size/#:~:text=Batch%20size%20controls%20the%20accuracy,stability%20of%20the%20learning%20process
-[^4]:https://medium.com/analytics-vidhya/when-and-why-are-batches-used-in-machine-learning-acda4eb00763
-[^5]:https://machinelearningmastery.com/gradient-descent-with-momentum-from-scratch/#:~:text=Momentum%20is%20an%20extension%20to,spots%20of%20the%20search%20space
-[^6]:https://medium.com/analytics-vidhya/when-and-why-are-batches-used-in-machine-learning-acda4eb00763
-[^7]:https://www.kdnuggets.com/2020/12/optimization-algorithms-neural-networks.html
-[^8]:https://www.youtube.com/watch?v=x6f5JOPhci0
-[^9]:https://www.kdnuggets.com/2020/12/optimization-algorithms-neural-networks.html
-[^10]:https://www.kdnuggets.com/2020/12/optimization-algorithms-neural-networks.html
-[^11]:https://medium.com/@kaitotally/adam-the-birthchild-of-adagrad-and-rmsprop-b5308b24b9cd#:~:text=RMSProp%20is%20a%20derivation%20of,the%20sum%20of%20its%20gradients
-[^12]:https://ruder.io/optimizing-gradient-descent/index.html#adadelta
-[^13]:https://www.geeksforgeeks.org/intuition-of-adam-optimizer/
-[^14]:https://www.youtube.com/watch?v=JXQT_vxqwIs
-[^15]:https://towardsdatascience.com/complete-guide-to-adam-optimization-1e5f29532c3d
-[^16]:https://towardsdatascience.com/complete-guide-to-adam-optimization-1e5f29532c3d
-[^17]:https://arxiv.org/pdf/1412.6980.pdf
+[^2]:Jason Brownlee, [“Difference Between a Batch and an Epoch in a Neural Network.”](https://machinelearningmastery.com/difference-between-a-batch-and-an-epoch/) Machine learning Mastery, July 20, 2018.
+[^3]:Jason Brownlee, [“How to Control the Stability of Training Neural Networks With the Batch Size.”](https://machinelearningmastery.com/how-to-control-the-speed-and-stability-of-training-neural-networks-with-gradient-descent-batch-size/#:~:text=Batch%20size%20controls%20the%20accuracy,stability%20of%20the%20learning%20process) Machine Learning Mastery, January 21, 2019.
+
+[^4]:Bipin Krishnan P, [“WHEN and WHY are batches used in machine learning?”](https://medium.com/analytics-vidhya/when-and-why-are-batches-used-in-machine-learning-acda4eb00763) Medium, November 19, 2019.
+[^5]: Jason Brownlee, [“Gradient Descent With Momentum from Scratch.”](https://machinelearningmastery.com/gradient-descent-with-momentum-from-scratch/#:~:text=Momentum%20is%20an%20extension%20to,spots%20of%20the%20search%20space) Machine Learning Mastery, February 5, 2021.
+[^6]:Bipin Krishnan P, [“WHEN and WHY are batches used in machine learning?”](https://medium.com/analytics-vidhya/when-and-why-are-batches-used-in-machine-learning-acda4eb00763) Medium, November 19, 2019.
+[^7]: Nagesh Sign Chuanan, [“Optimization Algorithms in Neural Networks - KDnuggets.”](https://www.kdnuggets.com/2020/12/optimization-algorithms-neural-networks.html) KD Nuggets, December 18, 2020.
+[^8]:Brandon Rhoher, [“How optimization for machine learning works, part 1.”](https://www.youtube.com/watch?v=x6f5JOPhci0) YouTube, October 14, 2018.
+[^9]:Nagesh Sign Chuanan, [“Optimization Algorithms in Neural Networks - KDnuggets.”](https://www.kdnuggets.com/2020/12/optimization-algorithms-neural-networks.html) KD Nuggets, December 18, 2020.
+[^10]:Nagesh Sign Chuanan, [“Optimization Algorithms in Neural Networks - KDnuggets.”](https://www.kdnuggets.com/2020/12/optimization-algorithms-neural-networks.html) KD Nuggets, December 18, 2020.
+[^11]: Kaivalya Tota, [“Adam: The Birthchild of AdaGrad and RMSProp.”](https://medium.com/@kaitotally/adam-the-birthchild-of-adagrad-and-rmsprop-b5308b24b9cd#:~:text=RMSProp%20is%20a%20derivation%20of,the%20sum%20of%20its%20gradients) Medium, August 22, 2020.
+[^12]:Sebastian Ruder, [“An overview of gradient descent optimization algorithms.”](https://ruder.io/optimizing-gradient-descent/index.html#adadelta) SebastianRuder.io, January 19, 2016.
+[^13]: Prakhar, [“Intuition of Adam Optimizer.](https://www.geeksforgeeks.org/intuition-of-adam-optimizer/) Geeks for Geeks, October 24, 2020.  
+[^14]: Andrew Ng, [“Adam Optimization Algorithm (C2W2L08).”](https://www.youtube.com/watch?v=JXQT_vxqwIs) YoutTube, August 25, 2017.
+[^15]: Layan Alabdullatef, [“Complete Guide to Adam Optimization.”](https://towardsdatascience.com/complete-guide-to-adam-optimization-1e5f29532c3d) Towards Data Science, September 2, 2020
+[^16]:Layan Alabdullatef, [“Complete Guide to Adam Optimization.”](https://towardsdatascience.com/complete-guide-to-adam-optimization-1e5f29532c3d) Towards Data Science, September 2, 2020
+[^17]:Diederik P. Kingma, Jimmy Lei Ba. [“Adam: A Mehtod for Stochastic Optimization.”](https://arxiv.org/pdf/1412.6980.pdf) International Conference on Learning Representations. (April, 2015): 9.
 
 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
