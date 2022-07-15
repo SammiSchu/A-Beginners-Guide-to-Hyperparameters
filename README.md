@@ -1,7 +1,5 @@
 # A Beginners Guide to Hyperparameters
-#### Written by: Samantha Schumacher and Mark Sherman, Ph.D.
-
-## add accesible text for images, and labels for table 
+#### Written by: Samantha Schumacher and Mark Sherman, Ph.D. 
 
 ## HyperParameters 
 ---
@@ -9,9 +7,9 @@ Within a neural network, there are *parameters* and *hyperparameters*. Parameter
 
 The hyperparameters are located on the far left side of Model Builder and they sometimes change depending on the type of optimizer. 
 
-|                                |                                |                                |
-|:------------------------------:|:------------------------------:|:------------------------------:|
-|![](SGD_hp_pics.png)            | ![](momentum_hp_pics.png)      |![](Adam_hp_pics.png)           |
+|Stochastic Gradient Descent Optimizer|Momentum Optimizer                 | Adam Opitimizer                   |
+|:-----------------------------------:|:---------------------------------:|:---------------------------------:|
+|![Stochastic Gradient Descent Optimizer with the hyperparameters learning rate and batch size](SGD_hp_pics.png)                 | ![momentum optimizer with the hyperparameters learning rate, momentum, batch size](momentum_hp_pics.png)         |![Adam Optimizer with the hyperparameters learning rate, Beta 1, Beta 2, and batch size](Adam_hp_pics.png)              |
 
 ## Learning Rate 
 ---
@@ -19,23 +17,23 @@ The *learning rate* controls how much we adjust the weights of our neural networ
 
 While there is no perfect fit for setting the learning rate, you can look at the model's loss as an indicator of how well the learning rate is performing.  An appropriate learning rate will immediately begin to improve the model's loss and will get to a suitable accuracy within a reasonable amount of epochs depending on the specific project. For best practice, it is recommended that you start with a lower learning rate and gradually increase it while monitoring your model’s loss along the way. The image below shows that it took the model around 45 epochs to get to a cost of 0.5.
 
-![](LR_just_right.2.png)
+![learning rate set to an appropriate value](LR_just_right.2.png)
 
 If the loss immediately increases, and continues to increase, that is a sign that the learning rate is too high. It is likely that the optimizer is taking steps that are too big and is stepping over the global minimum. This situation is shown in the chart below, where the loss immediately spikes to 10 after less than 5 epochs.
 
-![](LR_way_too_high600.png)
+![learning rate way too high](LR_way_too_high600.png)
 
 If our loss function begins to decrease during the first few epochs but plateaus over time this is an indicator that the learning rate is a little too high, but not as drastic as the first scenario. This can be seen below, where the cost spikes to 10 and then drops to 2.5 after a few epochs. The model remains stuck at this cost despite training for a little under 150 epochs. 
 
-![](LR_too_high1.png)
+![learning rate too high](LR_too_high1.png)
 
 If the learning rate is too low it might eventually reach an acceptable loss (somewhere close to zero but will vary depending on the situation), but it will take a very long time. This does not impact the effectiveness of the model, it just becomes unreasonable to use since time is a finite resource. The learning rate in the image below is incredibly low and it took the model over 700 epochs to reach a cost of around 0.5.
 
-![](LR_too_low.01.png)
+![compiling all learning rates values from previous images](LR_too_low.01.png)
 
 In the following image, you can see a visual summary of how to tell if your learning rate is set too high or too low.  
 
-![](LR_sum.png)
+![Understanding learning rates](LR_sum.png)
 
 [Understanding learning rates](https://towardsdatascience.com/understanding-learning-rates-and-how-it-improves-performance-in-deep-learning-d0d4059c1c10)
 
@@ -64,7 +62,7 @@ To combat the memory and time issues associated with Gradient Descent, SGD break
 
 The animation below shows how an SGD optimizer interacts with the gradient. It is able to move out of the local minima and land in the general area of the global minimum. Once in the global minimum, it oscillates back and forth for a couple of iterations before landing at the bottom. 
 
-![](SGD_gif.gif)
+![Visual representation of SGD](SGD_gif.gif)
 
 [Visual representation of SGD](https://medium.com/@kaitotally/adam-the-birthchild-of-adagrad-and-rmsprop-b5308b24b9cd#:~:text=RMSProp%20is%20a%20derivation%20of,the%20sum%20of%20its%20gradients)
 
@@ -74,9 +72,9 @@ This optimizer uses the same approach as SGD except momentum is added. That mean
 
 This animation visualizes the benefits of using momentum. Just like with SGD, the optimizer quickly exits the local minima. However, unlike SGD, there is significantly less oscillation around the global minimum.
 
-![](SGD_momentum.gif)
+![Visual representation of SGD with momentum](SGD_momentum.gif)
 
-[Visual representaton of SGD with momentum](https://medium.com/@kaitotally/adam-the-birthchild-of-adagrad-and-rmsprop-b5308b24b9cd#:~:text=RMSProp%20is%20a%20derivation%20of,the%20sum%20of%20its%20gradients)
+[Visual representation of SGD with momentum](https://medium.com/@kaitotally/adam-the-birthchild-of-adagrad-and-rmsprop-b5308b24b9cd#:~:text=RMSProp%20is%20a%20derivation%20of,the%20sum%20of%20its%20gradients)
 
 ## Adaptive Gradient Descent (AdaGrad)
 
@@ -94,7 +92,7 @@ This optimizer is an extension to AdaGrad that also addresses the vanishing grad
 	
 Adam is a combination of RMSprop and momentum. As in RMSprop, Adam uses a moving window of past parameter changes that is denoted by the Beta1 and Beta2 hyperparameters. The Beta1 value controls momentum. Beta2 replaces the Gamma hyperparameter from RMSprop, which controls the window size. This allows the model to take big enough steps using momentum, while also limiting any oscillation around the global minimum.[^13] Adam works well in many different situations and is one of the best performing optimizers.[^14] The Beta1 and Beta2 hyperparameters should be set within the range 0 ≤ B < 1, however, the creators of the Adam optimizer recommend Beta1 be set to 0.9 and Beta2 be set to 0.999.[^15] You can see the benefits of the Adam optimizer in the graphic below. 
 
-![](adam.gif)
+![Visual representation of Adam 0ptimizer](adam.gif)
 
 [Visual representation of Adam 0ptimizer](https://medium.com/@kaitotally/adam-the-birthchild-of-adagrad-and-rmsprop-b5308b24b9cd#:~:text=RMSProp%20is%20a%20derivation%20of,the%20sum%20of%20its%20gradients)
 
@@ -102,35 +100,6 @@ Adam is a combination of RMSprop and momentum. As in RMSprop, Adam uses a moving
 
 AdaMax is an extension of Adam that calculates the gradient a little differently. This optimizer is more resistant to changes in the gradient. It withholds large weight changes for extreme situations.[^16] This optimizer does not work well in every environment. Typically, it performs best in more complex gradients. As a result, it is not always a good replacement for Adam. The creators of Adamax recommend that Beta1 be set to 0.9 and Beta2 set to 0.999, however, Beta1 and Beta2 can be set in the range 0 ≤ B < 1.[^17]
 
-### References 
-
-Alabdullatef, Layan. [“Complete Guide to Adam Optimization.”](https://towardsdatascience.com/complete-guide-to-adam-optimization-1e5f29532c3d) Medium. Towards Data Science, September 2, 2020.  
-
-Brownlee, Jason. [“Difference between a Batch and an Epoch in a Neural Network.”](https://machinelearningmastery.com/difference-between-a-batch-and-an-epoch/.) Machine Learning Mastery, October 25, 2019. 
-
-Brownlee, Jason. [“Gradient Descent with Momentum from Scratch.”](https://machinelearningmastery.com/gradient-descent-with-momentum-from-scratch/#:~:text=Momentum%20is%20an%20extension%20to,spots%20of%20the%20search%20space.) Machine Learning Mastery, October 11, 2021.  
-
-Brownlee, Jason. [“How to Control the Stability of Training Neural Networks with the Batch Size.”](https://machinelearningmastery.com/how-to-control-the-speed-and-stability-of-training-neural-networks-with-gradient-descent-batch-size/#:~:text=Batch%20size%20controls%20the%20accuracy,stability%20of%20the%20learning%20proces) Machine Learning Mastery, August 27, 2020.   
-
-Ng, Andrew. [“Adam Optimization Algorithm (C2W2L08).”](https://www.youtube.com/watch?v=JXQT_vxqwIs.) YoutTube, August 25, 2020. 
-
-[“Optimization Algorithms in Neural Networks.”](https://www.kdnuggets.com/2020/12/optimization-algorithms-neural-networks.html) KDnuggets, December 18, 2020. 
-
-Andrea Perlato, [“The Learning Rate,”](https://www.andreaperlato.com/theorypost/the-learning-rate/#:~:text=The%20range%20of%20values%20to,starting%20point%20on%20your%20problem.) AndreaPerlato.com.
-
-P, Bipin Krishnan. [“When and Why Are Batches Used in Machine Learning?”](https://medium.com/analytics-vidhya/when-and-why-are-batches-used-in-machine-learning-acda4eb00763) Medium. Analytics Vidhya, April 22, 2022. 
-
-Prakhar. [“Intuition of Adam Optimizer.”](https://www.geeksforgeeks.org/intuition-of-adam-optimizer/.) GeeksforGeeks, October 24, 2020. 
-
-Rohrer, Brandon. [“How Optimization for Machine Learning Works, Part 1.”](https://www.youtube.com/watch?v=x6f5JOPhci0.) YouTube. YouTube, October 14, 2018. 
-
-Ruder, Sebastian. [“An Overview of Gradient Descent Optimization Algorithms.”](https://ruder.io/optimizing-gradient-descent/index.html#adadelta.) Sebastian Ruder. Sebastian Ruder, March 20, 2020. 
-
-Shen, Kevin. [“Effect of Batch Size on Training Dynamics.”](https://medium.com/mini-distill/effect-of-batch-size-on-training-dynamics-21c14f7a716e) Medium. Mini Distill, June 19, 2018. 
-
-Tota, Kaivalya. [“Adam: The Birthchild of Adagrad and RMSProp.”](https://medium.com/@kaitotally/adam-the-birthchild-of-adagrad-and-rmsprop-b5308b24b9cd#:~:text=RMSProp%20is%20a%20derivation%20of,the%20sum%20of%20its%20gradients.) Medium. Medium, April 22, 2020.  
-
-Versloot, Christian. [“Extensions to Gradient Descent from Momentum to AdaBound.”](https://github.com/christianversloot/machine-learning-articles/blob/main/extensions-to-gradient-descent-from-momentum-to-adabound.md) GitHub, February 15, 2022.   
 
 [^1]: Andrea Perlato, [“The Learning Rate - Andrea Perlato.”](https://www.andreaperlato.com/theorypost/the-learning-rate/#:~:text=The%20range%20of%20values%20to,starting%20point%20on%20your%20problem) AndreaPerlato.com.
 [^2]:Jason Brownlee, [“Difference Between a Batch and an Epoch in a Neural Network.”](https://machinelearningmastery.com/difference-between-a-batch-and-an-epoch/) Machine learning Mastery, July 20, 2018.
